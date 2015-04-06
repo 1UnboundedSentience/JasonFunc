@@ -1,0 +1,25 @@
+function AlphabetSoup(str) { 
+  var a = str.split('');
+  var temp = '';
+  var temp2 = '';
+
+
+  for (var i = 0; i<=str.length; i++) {
+
+
+    for (var j = 0; j < i; j++) {
+        if (a[i] < a[j]) { // if a[j] > all elem
+            temp = a[j];
+            a[j] = a[i];
+            a[i] = temp;
+            console.log(temp);
+        }
+    }
+  }
+  b = a.join("");
+  
+  return b; 
+         
+}
+
+AlphabetSoup('coderbyte');
